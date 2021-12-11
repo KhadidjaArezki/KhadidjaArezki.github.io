@@ -15,3 +15,11 @@ jobs:
       uses: ludeeus/action-shellcheck@master
         #with:
         #scandir: './shellScripts
+
+  proselint:
+    name: Proselint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: Run proselint
+    uses: KhadidjaArezki/action-proselint@master
