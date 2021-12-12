@@ -4,7 +4,7 @@ file="~/Documents/Khadidja/startup_times.txt"
 
 while IFS= read -r line; do
     "$long_times"+="$line"
-    (awk '$0 ~ /^([0-9]+min.*)$/ {print $0}' "$file")
+    (awk '$0 ~ /^([0-9]+min.*)$/ {print $0}' >> "$file")
 done
 
 echo "$long_times"
